@@ -1,0 +1,27 @@
+{
+  "name": "nasm-x86-assembly-language",
+  "displayName": "NASM X86 Assembly Language",
+  "description": "Support NASM x86 assembly language",
+  "version": "0.0.1",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "publisher": "ykkz000",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "assembly",
+      "aliases": ["NASM X86 Assembly", "assembly", "asm"],
+      "extensions": [".asm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "assembly",
+      "scopeName": "source.asm",
+      "path": "./syntaxes/assembly.tmLanguage.json"
+    }]
+  }
+}
