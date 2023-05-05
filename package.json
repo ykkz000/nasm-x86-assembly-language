@@ -8,6 +8,7 @@
     "vscode": "^1.78.0"
   },
   "author": "ykkz000",
+  "publisher": "ykkz000",
   "license": "The MIT LICENSE",
   "categories": [
     "Programming Languages"
