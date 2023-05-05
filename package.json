@@ -1,27 +1,48 @@
 {
   "name": "nasm-x86-assembly-language",
   "displayName": "NASM X86 Assembly Language",
-  "description": "Support NASM x86 assembly language",
+  "description": "%extension.nasm-x86-assembly-language.description%",
   "version": "0.0.1",
-  "icon": "icon.png",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.78.0"
   },
-  "publisher": "ykkz000",
+  "author": "ykkz000",
+  "license": "The MIT LICENSE",
   "categories": [
     "Programming Languages"
   ],
+  "main": "./out/extensions.js",
+  "activationEvents": [
+    "*"
+  ],
   "contributes": {
-    "languages": [{
-      "id": "assembly",
-      "aliases": ["NASM X86 Assembly", "assembly", "asm"],
-      "extensions": [".asm"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "assembly",
-      "scopeName": "source.asm",
-      "path": "./syntaxes/assembly.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "assembly",
+        "aliases": [
+          "NASM X86 Assembly",
+          "assembly",
+          "asm"
+        ],
+        "extensions": [
+          ".asm",
+          ".nasm",
+          ".s"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "assembly",
+        "scopeName": "source.asm",
+        "path": "./syntaxes/assembly.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/ykkz000/nasm-x86-assembly-language",
+    "type": "git"
   }
 }
