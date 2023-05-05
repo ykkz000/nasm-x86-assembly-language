@@ -14,9 +14,6 @@
     "Programming Languages"
   ],
   "main": "./out/extensions.js",
-  "activationEvents": [
-    "*"
-  ],
   "contributes": {
     "languages": [
       {
