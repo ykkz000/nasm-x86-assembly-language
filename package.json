@@ -2,7 +2,7 @@
   "name": "nasm-x86-assembly-language",
   "displayName": "NASM X86 Assembly Language",
   "description": "Support NASM x86 assembly language",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.78.0"
@@ -38,6 +38,12 @@
         "language": "assembly",
         "scopeName": "source.asm",
         "path": "./syntaxes/assembly.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "assembly",
+        "path": "./snippets/assembly.json"
       }
     ]
   },

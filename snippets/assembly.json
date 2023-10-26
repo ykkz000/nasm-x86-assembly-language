@@ -1,0 +1,70 @@
+{
+	"__stdcall": {
+		"scope": "assembly",
+		"prefix": "stdcall",
+		"body": [
+			"_${1:function}@$2:",
+			"\tpush ebp",
+			"\tmov ebp, esp",
+			"\tsub esp, $3",
+			"\tleave",
+			"\tretn $2"
+		],
+		"description": "__stdcall Function"
+	},
+	"__cdecl": {
+		"scope": "assembly",
+		"prefix": "cdecl",
+		"body": [
+			"_${1:function}:",
+			"\tpush ebp",
+			"\tmov ebp, esp",
+			"\tsub esp, $2",
+			"\tleave",
+			"\tret"
+		],
+		"description": "__cdecl Function"
+	},
+	"bits": {
+		"scope": "assembly",
+		"prefix": "bits",
+		"body": [
+			"[bits ${1|16,32|}]"
+		],
+		"description": "bits"
+	},
+	"data section": {
+		"scope": "assembly",
+		"prefix": "data",
+		"body": [
+			"section .data"
+		],
+		"description": "data section"
+	},
+	"rodata section": {
+		"scope": "assembly",
+		"prefix": "rodata",
+		"body": [
+			"section .rodata"
+		],
+		"description": "rodata section"
+	},
+	"text section": {
+		"scope": "assembly",
+		"prefix": "text",
+		"body": [
+			"section .text"
+		],
+		"description": "text section"
+	},
+	"macro": {
+		"scope": "assembly",
+		"prefix": "macro",
+		"body": [
+			"%macro $1 $2",
+			"\t$3",
+			"%endmacro"
+		],
+		"description": "define macro"
+	}
+}
