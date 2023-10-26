@@ -4,8 +4,13 @@ All notable changes to the "nasm-x86-assembly-language" extension will be docume
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
-## [0.0.1] - 2023-006
+## [0.0.2] - 2023-10
+
+### Added
+- v0.0.2 Highlight for preprocessors
+- v0.0.2 Identation
+
+## [0.0.1] - 2023-06
 
 ### Added
 - v0.0.1 Highlight

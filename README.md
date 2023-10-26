@@ -17,3 +17,8 @@ The version of Visual Studio Code must be greater or equal to 1.78.0
 ### 0.0.1
 
 Initial release of NASM X86 assembly language plugin.
+
+### 0.0.2
+
+- Highlight for preprocessors
+- Identation
