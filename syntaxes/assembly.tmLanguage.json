@@ -3,13 +3,16 @@
 	"name": "NASM X86 Assembly",
 	"patterns": [
 		{
-			"include": "#operators"
+			"include": "#instructions"
 		},
 		{
-			"include": "#registers"
+			"include": "#pseinstructions"
 		},
 		{
 			"include": "#preprocessor"
+		},
+		{
+			"include": "#registers"
 		},
 		{
 			"include": "#strings-double"
@@ -25,22 +28,28 @@
 		}
 	],
 	"repository": {
-		"operators": {
+		"instructions": {
 			"patterns": [{
 				"name": "keyword.control.assembly",
 				"match": "\\b(?i)(mov|movsx|movzx|push|pop|pusha|popa|pushad|popad|bswap|xchg|xadd|xlat|cmpxchg|enter|leave|in|out|lea|lds|les|lfs|lgs|lss|lahf|sahf|pushf|popf|pushd|popd|add|adc|inc|aaa|daa|sub|sbb|dec|neg|cmp|aas|das|mul|imul|aam|div|idiv|aad|cbw|cwd|cwde|cdq|and|or|xor|not|test|shl|sal|shr|sar|rol|ror|rcl|rcr|movs|movsb|movsw|movsd|cmps|cmpsb|cmpsw|cmpsd|scas|scasb|scasw|scasd|lods|lodsb|lodsw|lodsd|stos|stosb|stosw|stosd|ins|insb|insw|insd|outs|outsb|outsw|outsd|rep|repe|repz|repne|repnz|repc|repnc|jmp|call|ret|retf|retn|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jg|jnle|jge|jnl|jl|jnge|jle|jng|je|jz|jne|jnz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|loop|loope|loopz|loopne|loopnz|jcxz|jecxz|int|into|iret|iretd|lgdt|sgdt|lidt|sidt|lldt|sldt|hlt|wait|esc|lock|nop|stc|clc|cmc|std|cld|sti|cli|finit|fclex|fdisi|feni|fwait|fnop|fxch|fstsw|fldcw|fstcw|fldenv|fstenv|frstor|fsave|ffree|fdecstp|fincstp|fsetpm|fldz|fld1|fldpi|fldl2t|fldl2e|fldlg2|fldln2|fld|fild|fbld|fst|fist|fstp|fistp|fbstp|fcmovb|fcmovbe|fcmove|fcmovnb|fcmovnbe|fcmovne|fcmovnu|fcmovu|fcom|fcomi|fcomip|ficom|ficomp|ftst|fucom|fucomp|fucompp|fxam|fadd|faddp|fiadd|fsub|fsubp|fsubr|fsubrp|fisub|fisubr|fmul|fmulp|fimul|fdiv|fdivp|fdivr|fdivrp|fidiv|fidivr|fchs|fabs|fsqrt|fscale|frndint)\\b"
+			}]
+		},
+		"pseinstructions": {
+			"patterns": [{
+				"name": "storage.type.assembly",
+				"match": "\\b(?i)(db|dw|dd|dq|dt|do|dy|byte|word|dword|tword|oword|yword|resb|resw|resd|resq|rest|reso|resy|times|section|$|$$|seg|wrt|strict|near|short|far|equ|org|bits|vstart|default|extern|global)\\b"
+			}]
+		},
+		"preprocessor": {
+			"patterns": [{
+				"name": "keyword.operator.assembly",
+				"match": "((?<=\\s)%\\w*(?=\\W)|^%\\w*(?=\\W)|(?<=\\s)%\\w*$|^%\\w*$)"
 			}]
 		},
 		"registers": {
 			"patterns": [{
 				"name": "keyword.other.assembly",
 				"match": "\\b(?i)(al|ah|bl|bh|cl|ch|dl|dh|ax|bx|cx|dx|si|di|sp|bp|cs|ds|es|fs|gs|ss|flags|eax|ebx|ecx|edx|esi|edi|esp|ebp|cr0|cr1|cr2|cr3|cr4|eflags|gdtr|idtr|ldtr|tr|dr0|dr1|dr2|dr3|dr4|dr5|dr6|dr7)\\b"
-			}]
-		},
-		"preprocessor": {
-			"patterns": [{
-				"name": "keyword.control.assembly",
-				"match": "\\b(?i)(db|dw|dd|dq|dt|do|dy|byte|word|dword|tword|oword|yword|resb|resw|resd|resq|rest|reso|resy|times|section|$|$$|seg|wrt|strict|near|short|far|equ|org|bits|vstart|default|extern|global)\\b"
 			}]
 		},
 		"strings-double": {
@@ -72,7 +81,7 @@
 			}]
 		},
 		"comments": {
-			"name": "comment.line.character",
+			"name": "comment.line.character.assembly",
 			"begin": ";",
 			"end": "\n",
 			"patterns": [
